@@ -1,0 +1,19 @@
+<h1 class="text-center">{{doctor.name}}</h1>
+<h2 class="text-center">{{doctor.place}}</h2>
+
+<div class="text-center" ng-if="page == 'floor'">
+    <img src="images/floor.png" class="floor" />
+    <a ng-click="changePage('description')" class="switcher"><span class="icon icon-steps"></span>Show steps</a>
+</div>
+<div class="text-center" ng-if="page != 'floor'">
+    <img src="images/description.png" class="floor" />
+    <a ng-click="changePage('floor')" class="switcher"><span class="icon icon-map"></span>Show map</a>
+</div>
+
+
+<div class="text-center blocks" style="margin-top: 35px;">
+    <div class="center">
+    <a class="poc-button" ng-click="showToast()">Print</a>
+    <a class="poc-button" style="margin-left: 4%;" ng-click="showToast()">Send to phone</a>
+    </div>
+</div>

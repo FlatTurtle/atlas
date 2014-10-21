@@ -1,0 +1,14 @@
+<h1>Find a doctor</h1>
+<input ng-model="query" id="input" placeholder="Select or type the name of the doctor: " />
+        <div class="doctors-result">
+            <ul class="doctors-result">
+                <li ng-repeat="doctor in doctors.data | filter:query">
+                    <a href="#/doctors/{{doctor.id}}">{{doctor.name}}</a>
+                </li>
+            </ul>
+
+            <div class="shadow"></div>
+        </div>
+
+
+<div id="virtualKeyboard"></div>
